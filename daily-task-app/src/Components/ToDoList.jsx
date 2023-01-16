@@ -22,6 +22,16 @@ const ToDoList = () => {
         setTodos(completedTodos);
         
     }
+     const deleteTodos = (id) => {
+         const removeTodo = [...todos].filter(todo => todo.id !== id)
+         setTodos(removeTodo);     
+    }
+    const editTodos = (id,newValue) => {
+       if (newValue.text || /^\s*$/.test(newValue.text)) {
+            return;
+        }
+        setTodos(prev => prev.map(item => (item.id === id ? newValue : item)));
+    }
     return (
         <div>
             <h1>What's the Plan for Today?</h1>
@@ -29,6 +39,8 @@ const ToDoList = () => {
             <ToDos
                 todos={todos}
                 completeTodo={completeTodo}
+                deleteTodos={deleteTodos}
+                editTodos={editTodos}
             />
         </div>
     );

@@ -13,7 +13,8 @@ const ToDoForm = (props) => {
         <form onSubmit={ handleSubmitEvent} className="todo-form">
             <input type="text" value={input}
                 placeholder="Add a task" onChange={e => setInput(e.target.value)}
-                className="todo-input" />
+                className="todo-input"
+            required/>
             <button className= "todo-button">Add Todo</button>
             </form>
     );
