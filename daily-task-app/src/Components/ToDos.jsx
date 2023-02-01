@@ -14,7 +14,7 @@ const ToDos = ({ todos, completeTodo,deleteTodos,editTodos }) => {
         return <ToDoForm edit={edit} onSubmit={submitUpdate } /> 
     }
     return todos.map((todo, index) => (
-        <div className={todo.isComplete ? "todo-row complete" : "todo-row"} key={index}>
+        <div className={todo.isComplete ? 'todo-row complete' : 'todo-row'} key={index}>
             <div key ={todo.id} onClick={()=>completeTodo(todo.id)}>
             {todo.test}
             </div>

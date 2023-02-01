@@ -33,7 +33,8 @@ h1 {
 
 .complete {
   text-decoration: line-through;
-  opacity: 0.4;
+  opacity: 0.5;
+  color: black;
 }
 
 .todo-form {
@@ -48,10 +49,11 @@ h1 {
   width: 320px;
   background: transparent;
   color: black;
+  font-weight: 12px;
 }
 
 .todo-input::placeholder {
-  color: #e2e2e2;
+  color: #1f1d1d;
 }
 
 .todo-button {

@@ -17,7 +17,7 @@ const ToDoList = () => {
             if (todo.id === id) {
                 todo.isComplete = !todo.isComplete;
             }
-            return todos;
+            return todo;
         })
         setTodos(completedTodos);
         
